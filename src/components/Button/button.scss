@@ -1,0 +1,39 @@
+@use '../../styles/' as *;
+
+button {
+  cursor: pointer;
+  font-family: $font-work-sans;
+}
+
+.btn {
+  padding: $spacing-sm;
+  border: none;
+  border-radius: $spacing-xs;
+  background-color: $color-cyan;
+
+  color: $color-white;
+  font-size: $font-sm;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &-outline {
+    border: 3px solid $color-white;
+    background-color: transparent;
+    color: $color-white;
+    box-shadow: unset;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+}
+
+.btn-outline:hover {
+  box-shadow: unset;
+  //   color: $main-color;
+  background-color: $color-white;
+}
+
+.btn.small {
+  border-width: 2px;
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+}
