@@ -1,3 +1,5 @@
+@use './mixins' as *;
+
 @font-face {
   font-family: 'Avenir Next';
   src: url(./font/AvenirNextLTPro-Regular.otf);
@@ -25,4 +27,12 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+.container {
+  padding-inline: 1.5rem;
+
+  @include mq('phablet', min) {
+    padding-inline: 3rem;
+  }
 }
