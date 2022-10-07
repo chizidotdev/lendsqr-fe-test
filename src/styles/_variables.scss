@@ -2,12 +2,12 @@
 $font-work-sans: 'Work Sans', sans-serif;
 $font-avenir-next: 'Avenir Next', sans-serif;
 
-$font-xs: 12px;
-$font-sm: 14px;
-$font-md: 16px;
-$font-lg: 20px;
-$font-xl: 24px;
-$font-xxl: 40px;
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-md: 1rem; // 16px
+$font-lg: 1.25rem; // 20px
+$font-xl: 1.5rem; // 24px
+$font-xxl: 2.5rem; // 40px
 
 /*======= Colors =======*/
 $color-white: rgb(255, 255, 255);
@@ -21,11 +21,11 @@ $gradient-border: linear-gradient(0deg, rgba(84, 95, 125, 0.15), rgba(84, 95, 12
   linear-gradient(0deg, #ffffff, #ffffff);
 
 /*======= Spacing =======*/
-$spacing-xs: 8px;
-$spacing-sm: 16px;
-$spacing-md: 24px;
-$spacing-lg: 32px;
-$spacing-xl: 40px;
+$spacing-xs: 0.5rem; // 8px
+$spacing-sm: 1rem; // 16px
+$spacing-md: 1.5rem; // 24px
+$spacing-lg: 2rem; // 32px
+$spacing-xl: 2.5rem; // 40px
 
 /*======= Shadows =======*/
 $shadow-base: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
