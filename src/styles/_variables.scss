@@ -1,0 +1,29 @@
+/*======= Fonts =======*/
+$font-work-sans: 'Work Sans', sans-serif;
+$font-avenir-next: 'Avenir Next', sans-serif;
+
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 20px;
+$font-xl: 24px;
+
+/*======= Colors =======*/
+$color-grey: rgba(84, 95, 125, 1);
+$color-blue: rgba(33, 63, 125, 1);
+$color-cyan: rgba(57, 205, 204, 1);
+$color-red: rgba(228, 3, 59, 1);
+$color-yellow: rgba(233, 178, 0, 1);
+$color-green: rgba(57, 205, 98, 1);
+$gradient-border: linear-gradient(0deg, rgba(84, 95, 125, 0.15), rgba(84, 95, 125, 0.15)),
+  linear-gradient(0deg, #ffffff, #ffffff);
+
+/*======= Spacing =======*/
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+$spacing-xl: 40px;
+
+/*======= Shadows =======*/
+$shadow-base: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
