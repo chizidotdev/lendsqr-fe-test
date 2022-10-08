@@ -1,0 +1,36 @@
+@use '../../styles/' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.875rem;
+
+  width: 15rem;
+  background-color: $color-white;
+  padding: $spacing-lg;
+  border-radius: 4px;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    @include flexCenter;
+  }
+
+  &__title {
+    color: $color-grey;
+    font-size: $font-sm;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-size: $font-lg;
+    font-weight: 600;
+    color: $color-blue;
+  }
+}
