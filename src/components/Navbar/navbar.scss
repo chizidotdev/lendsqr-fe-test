@@ -1,0 +1,92 @@
+@use '../../styles/' as *;
+
+.navbar {
+  position: sticky;
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+  padding-block: clamp(1rem, 2.8vh, 2rem);
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.05);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: $spacing-lg;
+    }
+  }
+
+  &__search {
+    $height: 2.5rem;
+    display: flex;
+
+    .input {
+      border-width: 1px;
+      border-radius: $spacing-xs 0 0 $spacing-xs;
+      padding: $spacing-sm;
+      width: clamp(20rem, 25vw, 30rem);
+      height: $height;
+    }
+
+    .btn {
+      width: 4rem;
+      height: $height;
+      border-radius: 0 $spacing-xs $spacing-xs 0;
+      @include flexCenter;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__docs {
+    margin-right: $spacing-sm;
+    font-size: $spacing-sm;
+    color: $color-blue;
+    text-decoration: underline;
+  }
+
+  &__notify {
+    color: $color-blue;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    img {
+      border-radius: 50%;
+    }
+
+    /*======== Select Dropdown Styles Start =======*/
+    label {
+      @include flexCenter;
+      gap: $spacing-xs;
+    }
+
+    select {
+      border: none;
+      font-size: $font-md;
+      appearance: none;
+
+      &:disabled {
+        background-color: transparent;
+        color: $color-blue;
+        opacity: 1;
+
+        & > option {
+          color: $color-blue;
+        }
+      }
+    }
+    svg {
+      color: $color-blue;
+    }
+    /*======== Select Dropdown Styles End =======*/
+  }
+}
