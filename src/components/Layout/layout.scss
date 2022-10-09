@@ -1,0 +1,22 @@
+@use '../../styles/' as *;
+
+.layout {
+  $sidebar-width: clamp(15rem, 16vw, 20rem);
+  $navbar-height: clamp(5rem, 9.5vh, 7rem);
+  @include color(background-color, #fbfbfb);
+
+  .sidebar {
+    width: $sidebar-width;
+    padding-top: $navbar-height;
+  }
+
+  &__main {
+    padding-top: $navbar-height;
+    display: flex;
+  }
+
+  &__children {
+    padding-left: $sidebar-width;
+    width: 100%;
+  }
+}
