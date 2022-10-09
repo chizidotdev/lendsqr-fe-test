@@ -1,0 +1,88 @@
+@use '../../styles/' as *;
+
+.sidebar {
+  $link-padding: 0.875rem 2rem;
+  $link-opacity: 0.6;
+
+  font-family: $font-work-sans;
+  font-size: $font-md;
+  font-weight: 400;
+  @include color(background-color, $color-white);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  min-height: 100vh;
+  margin: 2rem auto;
+  padding: 2rem 0 4rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__heading {
+    padding: $link-padding;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $color-blue;
+
+    select {
+      border: none;
+      font-size: $font-md;
+
+      &:disabled {
+        background-color: transparent;
+        color: $color-blue;
+        opacity: 1;
+
+        & > option {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &__section {
+    padding-top: $spacing-sm;
+  }
+
+  &__navlink {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $link-padding;
+
+    font-size: $font-md;
+    color: $color-blue;
+
+    &--link {
+      opacity: $link-opacity;
+      transition: all 0.2s ease-in-out;
+
+      &.active,
+      &:hover {
+        opacity: 1;
+        border-left: 3px solid $color-cyan;
+        @include color(background-color, $color-cyan, 0.1);
+      }
+
+      &-title {
+        @include mq('tablet-wide', max) {
+          display: none;
+        }
+      }
+    }
+
+    &--heading {
+      padding-top: 0.875rem;
+      font-size: $font-xs;
+      font-weight: 500;
+      color: $color-grey;
+      text-transform: uppercase;
+    }
+  }
+}
