@@ -6,6 +6,7 @@ button {
 }
 
 .btn {
+  @include flexCenter;
   padding: $spacing-sm;
   border: none;
   border-radius: $spacing-xs;
@@ -18,11 +19,17 @@ button {
   letter-spacing: 1px;
 
   &-outline {
-    border: 3px solid $color-white;
+    @include flexCenter;
+    padding: 11px 16px;
+    border: 1px solid $color-cyan;
+    border-radius: $spacing-xs;
     background-color: transparent;
-    color: $color-white;
-    box-shadow: unset;
-    transition: color 0.3s ease, background-color 0.3s ease;
+
+    font-size: $font-xs;
+    color: $color-cyan;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 
