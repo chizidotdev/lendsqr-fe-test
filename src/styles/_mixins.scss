@@ -1,3 +1,10 @@
+/*======= Flex Box =======*/
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*======= Media Queries =======*/
 $breakpoints: (
   'phone': 400px,
@@ -26,16 +33,6 @@ $breakpoints: (
 }
 
 /*======= Colors =======*/
-$colors: (
-  'color-white': #ffffff,
-  'color-grey': #545f7d,
-  'color-blue': #213f7d,
-  'color-cyan': #39cdcc,
-  'color-red': #e4033b,
-  'color-yellow': #e9b200,
-  'color-green': #39cd62,
-);
-
 @mixin color($prop, $color, $opacity: 1) {
   #{$prop}: rgba($color: $color, $alpha: $opacity);
 }
