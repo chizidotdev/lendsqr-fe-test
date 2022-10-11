@@ -1,0 +1,109 @@
+@use '../../styles/' as *;
+
+.details-header {
+  margin-top: $spacing-lg;
+  background-color: $color-white;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  &__top {
+    color: $color-blue;
+    padding: $spacing-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-md;
+  }
+
+  &__avatar {
+    $avatar-size: 6.25rem;
+
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 50%;
+  }
+
+  &__title {
+    .name {
+      font-size: $font-xl;
+      font-weight: 500;
+      margin-bottom: $spacing-xs;
+    }
+    .id {
+      font-size: $font-sm;
+      font-weight: 400;
+      color: $color-grey;
+    }
+  }
+
+  &__tier {
+    padding-inline: $spacing-lg;
+    padding-block: $spacing-sm;
+    border-inline: 1px solid;
+    @include color(border-color, $color-grey, 0.2);
+
+    font-size: $font-sm;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    &--rating {
+      font-size: $font-md;
+      color: $color-yellow;
+      display: flex;
+      gap: 3px;
+    }
+  }
+
+  &__wallet {
+    .amount {
+      display: flex;
+      align-items: center;
+      font-size: $font-xl;
+      font-weight: 500;
+      margin-bottom: $spacing-xs;
+    }
+
+    .bank {
+      font-size: $font-xs;
+      font-weight: 400;
+    }
+  }
+
+  &__tabs {
+    padding-inline: $spacing-lg;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      cursor: pointer;
+      list-style: none;
+      padding-inline: $spacing-lg;
+      padding-bottom: $spacing-sm;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $color-cyan;
+      }
+    }
+
+    .active {
+      position: relative;
+      color: $color-cyan;
+      transition: all 0.2s ease-in-out;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $color-cyan;
+        margin-top: $spacing-sm;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
