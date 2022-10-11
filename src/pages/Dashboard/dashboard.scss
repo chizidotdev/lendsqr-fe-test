@@ -1,0 +1,43 @@
+@use '../../styles/' as *;
+
+.dashboard {
+  font-family: $font-work-sans;
+  @include color(background-color, #fbfbfb);
+
+  min-height: 100vh;
+  width: 100%;
+  max-width: 80rem;
+  margin: 3rem auto;
+
+  &__heading {
+    font-size: $font-xl;
+    font-weight: 500;
+    color: $color-blue;
+  }
+
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.875rem;
+    margin-block: 2rem;
+
+    .card {
+      &:nth-child(1) .card__icon {
+        @include color(color, $color-pink);
+        @include color(background-color, $color-pink, 0.1);
+      }
+      &:nth-child(2) .card__icon {
+        @include color(color, $color-purple);
+        @include color(background-color, $color-purple, 0.1);
+      }
+      &:nth-child(3) .card__icon {
+        @include color(color, $color-brown);
+        @include color(background-color, $color-brown, 0.1);
+      }
+      &:nth-child(4) .card__icon {
+        @include color(color, $color-maroon);
+        @include color(background-color, $color-maroon, 0.1);
+      }
+    }
+  }
+}
