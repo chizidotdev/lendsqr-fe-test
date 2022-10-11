@@ -14,6 +14,10 @@ $color-white: rgb(255, 255, 255);
 $color-grey: rgba(84, 95, 125, 1);
 $color-blue: rgba(33, 63, 125, 1);
 $color-cyan: rgba(57, 205, 204, 1);
+$color-pink: rgba(223, 24, 255, 1);
+$color-purple: rgba(87, 24, 255, 1);
+$color-brown: rgba(245, 95, 68, 1);
+$color-maroon: rgba(255, 51, 102, 1);
 $color-red: rgba(228, 3, 59, 1);
 $color-yellow: rgba(233, 178, 0, 1);
 $color-green: rgba(57, 205, 98, 1);
@@ -24,7 +28,7 @@ $gradient-border: linear-gradient(0deg, rgba(84, 95, 125, 0.15), rgba(84, 95, 12
 $spacing-xs: 0.5rem; // 8px
 $spacing-sm: 1rem; // 16px
 $spacing-md: 1.5rem; // 24px
-$spacing-lg: 2rem; // 32px
+$spacing-lg: 1.875rem; // 30px
 $spacing-xl: 2.5rem; // 40px
 
 /*======= Shadows =======*/
