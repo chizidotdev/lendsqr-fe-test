@@ -21,7 +21,7 @@ const Login = () => {
           <h1 className='login__form--heading'>Welcome!</h1>
           <p className='login__form--instruction'>Enter details to login.</p>
 
-          <form className='login__form--main' onSubmit={() => navigate('/')}>
+          <form className='login__form--main' onSubmit={() => navigate('/dashboard')}>
             <Input name='email' type='email' placeholder='Email' required />
             <Input name='password' type='password' placeholder='Password' required />
 
