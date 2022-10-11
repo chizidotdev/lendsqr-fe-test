@@ -1,0 +1,94 @@
+@use '../../styles/' as *;
+
+.details {
+  font-family: $font-work-sans;
+  @include color(background-color, #fbfbfb);
+
+  min-height: 100vh;
+  width: 100%;
+  max-width: 80rem;
+  margin: 3rem auto;
+
+  nav {
+    color: $color-blue;
+    font-size: $font-md;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+
+    svg {
+      font-size: $font-xl;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--title {
+      font-size: $font-xl;
+      font-weight: 500;
+      color: $color-blue;
+    }
+
+    &--buttons {
+      @include flexCenter;
+      gap: $spacing-md;
+
+      .blacklist {
+        color: $color-red;
+        border-color: $color-red;
+      }
+      .activate {
+        color: $color-cyan;
+        border-color: $color-cyan;
+      }
+    }
+  }
+
+  &__info {
+    margin-top: $spacing-lg;
+    padding-inline: $spacing-lg;
+    border-radius: 4px;
+    background-color: $color-white;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+    &--section {
+      padding-block: $spacing-md;
+      border-bottom: 1px solid;
+      @include color(border-color, $color-blue, 0.1);
+
+      &-title {
+        font-size: $font-md;
+        font-weight: 500;
+        color: $color-blue;
+        margin-bottom: $spacing-md;
+      }
+
+      &-content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: $spacing-sm $spacing-lg;
+
+        &-item {
+          &-title {
+            color: $color-grey;
+            font-size: $spacing-xs;
+            font-weight: 400;
+            line-height: $spacing-sm;
+            text-transform: uppercase;
+          }
+
+          &-value {
+            color: $color-grey;
+            font-size: $font-md;
+          }
+        }
+      }
+    }
+  }
+}
