@@ -1,0 +1,31 @@
+@use '../../styles/' as *;
+
+.options {
+  position: relative;
+
+  &__wrapper {
+    z-index: 20;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    width: max-content;
+    background-color: $color-white;
+    padding: $spacing-md;
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  &__item {
+    color: $color-grey;
+    font-size: $font-sm;
+    font-weight: 500;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+}
