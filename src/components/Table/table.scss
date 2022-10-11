@@ -1,0 +1,74 @@
+@use '../../styles/' as *;
+
+.table {
+  font-family: $font-work-sans;
+  width: 100%;
+  // width: max-content;
+  // max-width: 75rem;
+  padding: 1.875rem;
+  background-color: $color-white;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+  &__head {
+    color: $color-grey;
+    font-size: $font-xs;
+    text-transform: uppercase;
+
+    &--item {
+      padding-block: $spacing-xs;
+      padding-inline: $spacing-xs;
+      text-align: start;
+      position: relative;
+
+      svg {
+        font-size: $spacing-sm;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: $spacing-xs;
+      }
+    }
+  }
+
+  &__body {
+    color: $color-grey;
+    font-size: $font-sm;
+    font-weight: 400;
+
+    &--item {
+      padding-block: $spacing-sm;
+      padding-inline: $spacing-xs;
+      border-bottom: 1px solid;
+      @include color(border-bottom-color, $color-blue, 0.1);
+
+      &.options {
+        padding-inline: $spacing-xs;
+        cursor: pointer;
+      }
+
+      &-status {
+        text-transform: capitalize;
+        border-radius: 6.25rem;
+        padding: 6px 13px;
+        width: max-content;
+
+        &.active {
+          @include color(background-color, $color-green, 0.1);
+          color: $color-green;
+        }
+        &.pending {
+          @include color(background-color, $color-yellow, 0.1);
+          color: $color-yellow;
+        }
+        &.inactive {
+          @include color(background-color, $color-grey, 0.1);
+          color: $color-grey;
+        }
+        &.blacklisted {
+          @include color(background-color, $color-red, 0.1);
+          color: $color-red;
+        }
+      }
+    }
+  }
+}
