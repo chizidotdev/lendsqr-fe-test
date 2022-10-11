@@ -12,6 +12,16 @@
     align-items: center;
     gap: $spacing-lg;
     margin-bottom: $spacing-md;
+
+    @include mq('tablet', max) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('phone-wide', max) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__avatar {
@@ -75,8 +85,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     li {
+      min-width: max-content;
       cursor: pointer;
       list-style: none;
       padding-inline: $spacing-lg;

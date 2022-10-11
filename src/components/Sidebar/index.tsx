@@ -18,11 +18,13 @@ import { RiUserSettingsFill } from 'react-icons/ri';
 import { BiSlider } from 'react-icons/bi';
 import { TbPercentage, TbReport } from 'react-icons/tb';
 
-type Props = {};
+type Props = {
+  sidebarIsVisible: boolean;
+};
 
-const Sidebar = (props: Props) => {
+const Sidebar = ({ sidebarIsVisible }: Props) => {
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${sidebarIsVisible && 'active'}`}>
       <div className='sidebar__heading'>
         <div>
           <IoBriefcase size={14} />

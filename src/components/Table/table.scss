@@ -3,8 +3,7 @@
 .table {
   font-family: $font-work-sans;
   width: 100%;
-  // width: max-content;
-  // max-width: 75rem;
+  min-width: 70rem;
   padding: 1.875rem;
   background-color: $color-white;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);

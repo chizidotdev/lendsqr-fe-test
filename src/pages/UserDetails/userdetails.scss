@@ -29,6 +29,12 @@
     align-items: center;
     justify-content: space-between;
 
+    @include mq('tablet', max) {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: $spacing-sm;
+    }
+
     &--title {
       font-size: $font-xl;
       font-weight: 500;
@@ -74,6 +80,22 @@
         grid-template-columns: repeat(5, 1fr);
         gap: $spacing-sm $spacing-lg;
 
+        @include mq('desktop', max) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include mq('tablet', max) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq('phablet', max) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq('phone-wide', max) {
+          grid-template-columns: 1fr;
+        }
+
         &-item {
           &-title {
             color: $color-grey;
@@ -86,6 +108,8 @@
           &-value {
             color: $color-grey;
             font-size: $font-md;
+            display: flex;
+            align-items: center;
           }
         }
       }

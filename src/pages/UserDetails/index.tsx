@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import UserDetailsHeader from '../../components/UserDetailsHeader';
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
+import { TbCurrencyNaira } from 'react-icons/tb';
 
 type Props = {};
 
@@ -133,9 +134,10 @@ const UserDetails = (props: Props) => {
               <div className='details__info--section-content-item'>
                 <h4 className='details__info--section-content-item-title'>Monthly Income</h4>
                 <p className='details__info--section-content-item-value'>
-                  {data?.education.monthlyIncome?.map((income: any, idx: number) => {
-                    return <span key={idx}>N{income}&nbsp;</span>;
-                  })}
+                  <TbCurrencyNaira />
+                  {data?.education.monthlyIncome[0]}&nbsp;-&nbsp;
+                  <TbCurrencyNaira />
+                  {data?.education.monthlyIncome[1]}
                 </p>
               </div>
 

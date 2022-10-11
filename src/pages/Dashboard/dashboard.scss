@@ -16,10 +16,18 @@
   }
 
   &__summary {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.875rem;
     margin-block: 2rem;
+
+    @include mq('tablet', max) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq('phone-wide', max) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .card {
       &:nth-child(1) .card__icon {
@@ -39,5 +47,9 @@
         @include color(background-color, $color-maroon, 0.1);
       }
     }
+  }
+
+  &__table {
+    overflow-x: scroll;
   }
 }

@@ -38,7 +38,7 @@ const Table = <T extends any[]>({ data }: Props<T>) => {
           const status = getRandomStatus();
 
           return (
-            <tr className='table__body'>
+            <tr className='table__body' key={user.id}>
               <td className='table__body--item'>{user.orgName}</td>
               <td className='table__body--item'>{user.userName}</td>
               <td className='table__body--item'>{user.email}</td>

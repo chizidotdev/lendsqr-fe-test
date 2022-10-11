@@ -13,13 +13,21 @@
 
   &__body {
     margin-top: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: $spacing-xs;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: $spacing-md;
+
+    @include mq('tablet-wide', max) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__illustration {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
     @include mq('tablet-wide', max) {
       display: none;
     }
