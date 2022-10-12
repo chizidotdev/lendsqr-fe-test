@@ -1,0 +1,64 @@
+@use '../../styles/' as *;
+
+.filter {
+  width: 100%;
+  display: inline;
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+
+  &__form {
+    $height: 2.5rem;
+    position: absolute;
+    top: $spacing-lg;
+    width: 270px;
+    padding: 1.25rem;
+    background-color: $color-white;
+    box-shadow: $shadow-base;
+    border-radius: 4px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      label {
+        font-size: $font-sm;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+
+    .input {
+      border-width: 1px;
+      padding: $spacing-sm;
+      height: $height;
+      margin-top: 6px;
+
+      &[type='date' i] {
+        color: $color-grey;
+      }
+    }
+
+    &--buttons {
+      height: $spacing-xl;
+      display: flex;
+      gap: $spacing-sm;
+      margin-top: $spacing-md;
+
+      .btn,
+      .btn-outline {
+        text-transform: capitalize;
+        letter-spacing: 0;
+        padding-inline: $spacing-lg;
+      }
+
+      .btn-outline {
+        @include color(border-color, $color-grey, 1);
+        @include color(color, $color-grey, 1);
+      }
+    }
+  }
+}
