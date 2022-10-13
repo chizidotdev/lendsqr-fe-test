@@ -1,6 +1,6 @@
 import { screen, render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Login from './';
+import Login from '..';
 
 describe('Login', () => {
   const onSubmit = jest.fn();
@@ -49,18 +49,4 @@ describe('Login', () => {
     expect(emailInput.value).toBe('');
     expect(passwordInput.value).toBe('');
   });
-
-  // test('app should route to dashboard on login success', async () => {
-  //   setup();
-  //   const emailInput = screen.getByPlaceholderText(/email/i) as HTMLInputElement;
-  //   const passwordInput = screen.getByPlaceholderText(/password/i) as HTMLInputElement;
-  //   const buttonElement = screen.getByRole('button', { name: /log in/i });
-
-  //   userEvent.type(emailInput, 'test@email.com');
-  //   userEvent.type(passwordInput, '12345');
-
-  //   userEvent.click(buttonElement);
-
-  //   expect(onSubmit).toBeCalled();
-  // });
 });

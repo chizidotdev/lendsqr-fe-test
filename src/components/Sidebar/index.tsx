@@ -38,7 +38,7 @@ const Sidebar = ({ sidebarIsVisible }: Props) => {
       </div>
 
       <div className='sidebar__section'>
-        <a href='/' className='sidebar__navlink sidebar__navlink--link'>
+        <a data-testid='nav-link' href='/' className='sidebar__navlink sidebar__navlink--link'>
           <FaHome />
 
           <span className='sidebar__navlink--link-title'>Dashboard</span>
@@ -50,6 +50,7 @@ const Sidebar = ({ sidebarIsVisible }: Props) => {
 
         {sidebarData.customers.map((item, index) => (
           <a
+            data-testid='nav-link'
             href='/'
             className={`sidebar__navlink sidebar__navlink--link  ${index === 0 && 'active'}`}
             key={index}
@@ -65,7 +66,12 @@ const Sidebar = ({ sidebarIsVisible }: Props) => {
         <h3 className='sidebar__navlink sidebar__navlink--heading'>Businesses</h3>
 
         {sidebarData.businesses.map((item, index) => (
-          <a href='/' className='sidebar__navlink sidebar__navlink--link ' key={index}>
+          <a
+            data-testid='nav-link'
+            href='/'
+            className='sidebar__navlink sidebar__navlink--link '
+            key={index}
+          >
             {item.icon}
 
             <span className='sidebar__navlink--link-title'>{item.title}</span>
@@ -77,7 +83,12 @@ const Sidebar = ({ sidebarIsVisible }: Props) => {
         <h3 className='sidebar__navlink sidebar__navlink--heading'>Settings</h3>
 
         {sidebarData.settings.map((item, index) => (
-          <a href='/' className='sidebar__navlink sidebar__navlink--link ' key={index}>
+          <a
+            data-testid='nav-link'
+            href='/'
+            className='sidebar__navlink sidebar__navlink--link '
+            key={index}
+          >
             {item.icon}
 
             <span className='sidebar__navlink--link-title'>{item.title}</span>

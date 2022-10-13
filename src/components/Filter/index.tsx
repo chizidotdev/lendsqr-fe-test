@@ -13,10 +13,15 @@ const Filter = (props: Props) => {
 
   return (
     <div className='filter' onClick={toggleShowFilter}>
-      <BiFilter />
+      <BiFilter data-testid='open-filter' />
 
       {showFilter && (
-        <div className='filter__form' onClick={toggleShowFilter} ref={ref}>
+        <div
+          className='filter__form'
+          onClick={toggleShowFilter}
+          ref={ref}
+          data-testid='popup-filter'
+        >
           <form>
             <label>
               Organization

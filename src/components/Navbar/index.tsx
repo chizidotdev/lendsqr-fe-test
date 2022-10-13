@@ -27,7 +27,7 @@ const Navbar = ({ toggleSidebar }: Props) => {
         <img src='/assets/logo.svg' alt='lendsqr logo' />
       </div>
 
-      <form className='navbar__search'>
+      <form className='navbar__search' data-testid='search-user'>
         <Input name='search' id='search' placeholder='Search for anything' />
         <Button className='btn'>
           <BiSearch size={18} />
@@ -41,12 +41,12 @@ const Navbar = ({ toggleSidebar }: Props) => {
 
         <BsBell size={24} className='navbar__notify' />
 
-        <div className='navbar__profile'>
+        <div className='navbar__profile' data-testid='user-profile'>
           <div onClick={toggleShowOptions}>
-            <img src='/assets/avatar.png' alt='profile' />
+            <img src='/assets/avatar.png' alt='user profile' />
           </div>
 
-          <label htmlFor='user'>
+          <label htmlFor='user' data-testid='user-name-select'>
             <select name='user' id='user' disabled>
               <option value='username'>Adedeji</option>
             </select>
@@ -59,7 +59,9 @@ const Navbar = ({ toggleSidebar }: Props) => {
             <a href='/' className='navbar__docs'>
               Docs
             </a>
-            <p className='search'>Search</p>
+            <p className='search' data-testid='search-user'>
+              Search
+            </p>
             <label htmlFor='user'>
               <select name='user' id='user' disabled>
                 <option value='username'>Adedeji</option>
