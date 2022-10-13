@@ -1,8 +1,8 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .details {
-  font-family: $font-work-sans;
-  @include color(background-color, #fbfbfb);
+  font-family: root.$font-work-sans;
+  @include root.color(background-color, #fbfbfb);
 
   min-height: 100vh;
   width: 100%;
@@ -10,17 +10,17 @@
   margin: 3rem auto;
 
   nav {
-    color: $color-blue;
-    font-size: $font-md;
+    color: root.$color-blue;
+    font-size: root.$font-md;
     cursor: pointer;
 
     display: flex;
     align-items: center;
-    gap: $spacing-sm;
-    margin-bottom: $spacing-lg;
+    gap: root.$spacing-sm;
+    margin-bottom: root.$spacing-lg;
 
     svg {
-      font-size: $font-xl;
+      font-size: root.$font-xl;
     }
   }
 
@@ -29,85 +29,85 @@
     align-items: center;
     justify-content: space-between;
 
-    @include mq('tablet', max) {
+    @include root.mq('tablet', max) {
       align-items: flex-start;
       flex-direction: column;
-      gap: $spacing-sm;
+      gap: root.$spacing-sm;
     }
 
     &--title {
-      font-size: $font-xl;
+      font-size: root.$font-xl;
       font-weight: 500;
-      color: $color-blue;
+      color: root.$color-blue;
     }
 
     &--buttons {
-      @include flexCenter;
-      gap: $spacing-md;
+      @include root.flexCenter;
+      gap: root.$spacing-md;
 
       .blacklist {
-        color: $color-red;
-        border-color: $color-red;
+        color: root.$color-red;
+        border-color: root.$color-red;
       }
       .activate {
-        color: $color-cyan;
-        border-color: $color-cyan;
+        color: root.$color-cyan;
+        border-color: root.$color-cyan;
       }
     }
   }
 
   &__info {
-    margin-top: $spacing-lg;
-    padding-inline: $spacing-lg;
+    margin-top: root.$spacing-lg;
+    padding-inline: root.$spacing-lg;
     border-radius: 4px;
-    background-color: $color-white;
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    background-color: root.$color-white;
+    box-shadow: root.$shadow-base;
 
     &--section {
-      padding-block: $spacing-md;
+      padding-block: root.$spacing-md;
       border-bottom: 1px solid;
-      @include color(border-color, $color-blue, 0.1);
+      @include root.color(border-color, root.$color-blue, 0.1);
 
       &-title {
-        font-size: $font-md;
+        font-size: root.$font-md;
         font-weight: 500;
-        color: $color-blue;
-        margin-bottom: $spacing-md;
+        color: root.$color-blue;
+        margin-bottom: root.$spacing-md;
       }
 
       &-content {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: $spacing-sm $spacing-lg;
+        gap: root.$spacing-sm root.$spacing-lg;
 
-        @include mq('desktop', max) {
+        @include root.mq('desktop', max) {
           grid-template-columns: repeat(4, 1fr);
         }
 
-        @include mq('tablet', max) {
+        @include root.mq('tablet', max) {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        @include mq('phablet', max) {
+        @include root.mq('phablet', max) {
           grid-template-columns: repeat(2, 1fr);
         }
 
-        @include mq('phone-wide', max) {
+        @include root.mq('phone-wide', max) {
           grid-template-columns: 1fr;
         }
 
         &-item {
           &-title {
-            color: $color-grey;
-            font-size: $spacing-xs;
+            color: root.$color-grey;
+            font-size: root.$spacing-xs;
             font-weight: 400;
-            line-height: $spacing-sm;
+            line-height: root.$spacing-sm;
             text-transform: uppercase;
           }
 
           &-value {
-            color: $color-grey;
-            font-size: $font-md;
+            color: root.$color-grey;
+            font-size: root.$font-md;
             display: flex;
             align-items: center;
           }
