@@ -3,24 +3,22 @@ import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 
 import { useNavigate, useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
 import UserDetailsHeader from '../../components/UserDetailsHeader';
 import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 import { TbCurrencyNaira } from 'react-icons/tb';
+import getUserDetails from '../../utils/getUserDetails';
+import { useMemo, useState } from 'react';
+import { userType } from '../../types';
 
 type Props = {};
 
 const UserDetails = (props: Props) => {
+  const [data, setData] = useState<userType | null>(null);
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data } = useQuery(['user'], getUser);
 
-  async function getUser() {
-    const res = await fetch(
-      `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users/${id}`
-    );
-    return await res.json();
-  }
+  useMemo(() => getUserDetails(id || '', setData), [id]);
 
   return (
     <Layout>

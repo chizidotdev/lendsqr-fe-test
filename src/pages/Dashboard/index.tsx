@@ -10,6 +10,7 @@ import { HiOutlineUsers } from 'react-icons/hi';
 import { FaUsers } from 'react-icons/fa';
 import { TbFileInvoice } from 'react-icons/tb';
 import { BiCoinStack } from 'react-icons/bi';
+import useIndexedDB from '../../hooks/useIndexedDB';
 
 const getUsers = () => {
   const data: Promise<userType[]> = fetch(
@@ -20,6 +21,8 @@ const getUsers = () => {
 
 const Dashboard = () => {
   const { data } = useQuery(['users', 0], getUsers);
+
+  useIndexedDB(data || []);
 
   return (
     <Layout>
