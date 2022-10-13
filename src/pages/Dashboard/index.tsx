@@ -1,17 +1,21 @@
+import './dashboard.scss';
+import { useQuery } from '@tanstack/react-query';
+import { userType } from '../../types';
+import UserCard from '../../components/UserCard';
+import Layout from '../../components/Layout';
+import PaginatedTable from '../../components/PaginatedTable';
+
+//====== Icons ======//
 import { HiOutlineUsers } from 'react-icons/hi';
 import { FaUsers } from 'react-icons/fa';
 import { TbFileInvoice } from 'react-icons/tb';
 import { BiCoinStack } from 'react-icons/bi';
-import './dashboard.scss';
-import UserCard from '../../components/UserCard';
-import Layout from '../../components/Layout';
-import Table from '../../components/Table';
-import { useQuery } from '@tanstack/react-query';
 
 const getUsers = () => {
-  return fetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users').then((res) =>
-    res.json()
-  );
+  const data: Promise<userType[]> = fetch(
+    'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users'
+  ).then((res) => res.json());
+  return data;
 };
 
 const Dashboard = () => {
@@ -29,7 +33,8 @@ const Dashboard = () => {
         </div>
 
         <div className='dashboard__table'>
-          <Table data={data} />
+          {data && <PaginatedTable<userType> data={data} itemsPerPage={10} />}
+          {/* {data && <Table data={data} />} */}
         </div>
       </div>
     </Layout>

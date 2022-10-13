@@ -1,5 +1,13 @@
 @use '../../styles/' as *;
 
+.table-container {
+  overflow-x: scroll;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
 .table {
   font-family: $font-work-sans;
   width: 100%;
@@ -33,6 +41,12 @@
     color: $color-grey;
     font-size: $font-sm;
     font-weight: 400;
+
+    &:last-child {
+      & .table__body--item {
+        border-bottom: none;
+      }
+    }
 
     &--item {
       padding-block: $spacing-sm;

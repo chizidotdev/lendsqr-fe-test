@@ -49,7 +49,11 @@
     }
   }
 
-  &__table {
-    overflow-x: scroll;
-  }
+  // &__table {
+  //   overflow-x: scroll;
+
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
 }
