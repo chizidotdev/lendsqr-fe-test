@@ -83,9 +83,13 @@ yarn test
 
     .
     ├── public/
-    ├── src/              # All source code goes here
+    ├── src/                    # All source code goes here
     ├   ├── components/
+    ├   ├   ...
+    ├   ├   ├   ├── __test__/   # Test cases for components goes here
     ├   ├── pages/
+    ├   ├   ...
+    ├   ├   ├   ├── __test__/   # Test cases for pages goes here
     ├   ├── styles/
     ├   ├   ├── font/
     ├   ├── hooks/
