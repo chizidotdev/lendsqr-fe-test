@@ -1,46 +1,108 @@
-# Getting Started with Create React App
+<p align="center">
+  <img width=200px src="./public/assets/logo.svg" alt="Project logo"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <p align="center">LENDSQR Frontend Test</p>
 
-## Available Scripts
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=1000px src="./preview.png" alt="Project logo"></a>
+</p>
 
-In the project directory, you can run:
+<div align="center">
 
-### `yarn start`
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/chizidotdev/lendsqr-fe-test.svg)](https://github.com/chizidotdev/lendsqr-fe-test/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/chizidotdev/lendsqr-fe-test.svg)](https://github.com/chizidotdev/lendsqr-fe-test/pulls)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## 📝 Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Usage & Folder Structure](#usage)
+- [Deployment](#deployment)
+- [Authors](#authors)
 
-### `yarn build`
+## 🧐 About <a name = "about"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+At Lendsqr, many of our lenders use our mobile apps to reach over half a million customers. At this scale, we use React with TypeScript and SCSS as its frontend software development stack which allows us to rapidly ideate and release features rapidly and reliably.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To prepare for you as a possible frontend engineer at Lendsqr, we would require that you create an application using React with SCSS. This test will allow us to assess your strengths and weaknesses.
 
-### `yarn eject`
+#### Assessment:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Given the design [here,](https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/FrontendTesting?node-id=5530%3A0) which has sample pages to be built.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Build the 4 pages Login, Dashboard, User page, User details page
+- The user pages should pull data from a mock api with 500 records
+- Use local storage or indexedDB to store and retrieve user details on the user details page.
+- The page must be mobile responsive
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Tech Stack:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+React with TypeScript
+SCSS
 
-## Learn More
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [Usage](#usage) for notes on folder and file structure.
+
+### Installing
+
+```
+npm install
+
+// or
+
+yarn
+```
+
+Then run the app with
+
+```bash
+yarn start
+```
+
+### 🔧 Running the tests <a name = "tests"></a>
+
+For automated tests, run
+
+```
+yarn test
+```
+
+## 🎈 Usage & Folder Structure <a name="usage"></a>
+
+    .
+    ├── public/
+    ├── src/              # All source code goes here
+    ├   ├── components/
+    ├   ├── pages/
+    ├   ├── styles/
+    ├   ├   ├── font/
+    ├   ├── hooks/
+    ├   ├── utils/
+    ├   ├── App.tsx
+    ├   ├── index.tsx
+    ├── .gitignore
+    ├── .package.json
+    ├── tsconfig.json
+    ├── README.md
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [Typescript](https://typescriptlang.org/) - Programming Language
+- [ReactJS](https://www.reacjs.org/) - Fronted Web Library
+- [SCSS](https://sass-lang.com/) - CSS preprocessor
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [Chizi Victor](https://github.com/chizidotdev) - Frontend Engineer
