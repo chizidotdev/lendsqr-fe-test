@@ -22,8 +22,13 @@ const Login = () => {
           <p className='login__form--instruction'>Enter details to login.</p>
 
           <form className='login__form--main' onSubmit={() => navigate('/dashboard')}>
-            <Input name='email' type='email' placeholder='Email' required />
-            <Input name='password' type='password' placeholder='Password' required />
+            <label htmlFor='email'>
+              <Input name='email' type='email' placeholder='Email' required />
+            </label>
+
+            <label htmlFor='email'>
+              <Input name='password' type='password' placeholder='Password' required />
+            </label>
 
             <a href='/'>forgot password?</a>
 
