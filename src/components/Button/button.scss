@@ -1,32 +1,32 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 button {
   cursor: pointer;
-  font-family: $font-work-sans;
+  font-family: root.$font-work-sans;
 }
 
 .btn {
-  @include flexCenter;
-  padding: $spacing-sm;
+  @include root.flexCenter;
+  padding: root.$spacing-sm;
   border: none;
-  border-radius: $spacing-xs;
-  background-color: $color-cyan;
+  border-radius: root.$spacing-xs;
+  background-color: root.$color-cyan;
 
-  color: $color-white;
-  font-size: $font-sm;
+  color: root.$color-white;
+  font-size: root.$font-sm;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
 
   &-outline {
-    @include flexCenter;
+    @include root.flexCenter;
     padding: 11px 16px;
-    border: 1px solid $color-cyan;
-    border-radius: $spacing-xs;
+    border: 1px solid root.$color-cyan;
+    border-radius: root.$spacing-xs;
     background-color: transparent;
 
-    font-size: $font-xs;
-    color: $color-cyan;
+    font-size: root.$font-xs;
+    color: root.$color-cyan;
     letter-spacing: 0.1em;
     font-weight: 600;
     text-transform: uppercase;
@@ -36,7 +36,7 @@ button {
 .btn-outline:hover {
   box-shadow: unset;
   //   color: $main-color;
-  background-color: $color-white;
+  background-color: root.$color-white;
 }
 
 .btn.small {

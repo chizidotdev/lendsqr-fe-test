@@ -1,15 +1,15 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .paginate-container {
-  margin-top: $spacing-md;
+  margin-top: root.$spacing-md;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  @include mq('tablet', max) {
+  @include root.mq('tablet', max) {
     flex-direction: column;
     align-items: flex-start;
-    gap: $spacing-md;
+    gap: root.$spacing-md;
   }
 
   .paginate {
@@ -30,17 +30,17 @@
     }
 
     .paginate__button {
-      @include flexCenter;
-      @include color(background-color, $color-blue, 0.1);
+      @include root.flexCenter;
+      @include root.color(background-color, root.$color-blue, 0.1);
       padding: 0.1rem;
       border-radius: 4px;
-      color: $color-blue;
-      font-size: $font-xl;
+      color: root.$color-blue;
+      font-size: root.$font-xl;
     }
 
     .paginate__item {
       cursor: pointer;
-      color: $color-grey;
+      color: root.$color-grey;
       opacity: 0.6;
 
       &.active {
@@ -49,25 +49,25 @@
     }
 
     &__count {
-      @include flexCenter;
-      gap: $spacing-xs;
-      color: $color-blue;
-      font-size: $font-sm;
+      @include root.flexCenter;
+      gap: root.$spacing-xs;
+      color: root.$color-blue;
+      font-size: root.$font-sm;
 
       select {
-        @include color(background-color, $color-blue, 0.1);
-        @include color(color, $color-blue);
+        @include root.color(background-color, root.$color-blue, 0.1);
+        @include root.color(color, root.$color-blue);
         width: 5rem;
         padding: 7px;
 
         border: none;
         border-radius: 4px;
-        font-size: $font-sm;
+        font-size: root.$font-sm;
         font-weight: 500;
 
         &:focus-visible {
           outline: 1px solid;
-          @include color(outline-color, $color-blue);
+          @include root.color(outline-color, root.$color-blue);
         }
       }
     }

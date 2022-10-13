@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .navbar {
   z-index: 20;
@@ -11,20 +11,20 @@
   grid-template-columns: 2fr 2fr 3fr;
   padding-block: clamp(1rem, 2.8vh, 2rem);
 
-  @include color(background-color, $color-white);
-  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.05);
+  @include root.color(background-color, root.$color-white);
+  box-shadow: root.$shadow-x;
 
-  @include mq('tablet-wide', max) {
+  @include root.mq('tablet-wide', max) {
     display: flex;
     justify-content: space-between;
   }
 
   &__hamburger {
     display: none;
-    color: $color-blue;
-    font-size: $font-lg;
+    color: root.$color-blue;
+    font-size: root.$font-lg;
 
-    @include mq('tablet-wide', max) {
+    @include root.mq('tablet-wide', max) {
       display: block;
     }
   }
@@ -32,13 +32,13 @@
   &__logo {
     display: flex;
     align-items: center;
-    gap: $spacing-sm;
+    gap: root.$spacing-sm;
 
     img {
-      height: $spacing-lg;
+      height: root.$spacing-lg;
 
-      @include mq('phone-wide', max) {
-        height: $spacing-md;
+      @include root.mq('phone-wide', max) {
+        height: root.$spacing-md;
       }
     }
   }
@@ -50,8 +50,8 @@
 
     .input {
       border-width: 1px;
-      border-radius: $spacing-xs 0 0 $spacing-xs;
-      padding: $spacing-sm;
+      border-radius: root.$spacing-xs 0 0 root.$spacing-xs;
+      padding: root.$spacing-sm;
       width: clamp(20rem, 25vw, 30rem);
       height: $height;
     }
@@ -59,11 +59,11 @@
     .btn {
       width: 4rem;
       height: $height;
-      border-radius: 0 $spacing-xs $spacing-xs 0;
-      @include flexCenter;
+      border-radius: 0 root.$spacing-xs root.$spacing-xs 0;
+      @include root.flexCenter;
     }
 
-    @include mq('tablet-wide', max) {
+    @include root.mq('tablet-wide', max) {
       display: none;
     }
   }
@@ -73,61 +73,61 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: $spacing-lg;
+    gap: root.$spacing-lg;
 
-    @include mq('tablet-wide', max) {
-      gap: $spacing-md;
+    @include root.mq('tablet-wide', max) {
+      gap: root.$spacing-md;
     }
   }
 
   &__docs {
-    margin-right: $spacing-sm;
-    font-size: $spacing-sm;
-    color: $color-blue;
+    margin-right: root.$spacing-sm;
+    font-size: root.$spacing-sm;
+    color: root.$color-blue;
     text-decoration: underline;
   }
 
   &__notify {
-    color: $color-blue;
+    color: root.$color-blue;
   }
 
   &__profile {
     display: flex;
     align-items: center;
-    gap: $spacing-sm;
+    gap: root.$spacing-sm;
 
     img {
       border-radius: 50%;
 
-      @include mq('phone-wide', max) {
-        width: $spacing-xl;
-        height: $spacing-xl;
+      @include root.mq('phone-wide', max) {
+        width: root.$spacing-xl;
+        height: root.$spacing-xl;
       }
     }
 
     svg {
-      color: $color-blue;
+      color: root.$color-blue;
     }
   }
 
   /*======== Select Dropdown Styles Start =======*/
   label {
-    @include flexCenter;
-    gap: $spacing-xs;
+    @include root.flexCenter;
+    gap: root.$spacing-xs;
   }
 
   select {
     border: none;
-    font-size: $font-md;
+    font-size: root.$font-md;
     appearance: none;
 
     &:disabled {
       background-color: transparent;
-      color: $color-blue;
+      color: root.$color-blue;
       opacity: 1;
 
       & > option {
-        color: $color-blue;
+        color: root.$color-blue;
       }
     }
   }
@@ -138,7 +138,7 @@
     display: none;
   }
 
-  @include mq('tablet', max) {
+  @include root.mq('tablet', max) {
     &__docs,
     label {
       display: none;
@@ -154,17 +154,17 @@
       position: absolute;
       top: 100%;
       right: 0;
-      background-color: $color-white;
+      background-color: root.$color-white;
       border-radius: 4px;
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+      box-shadow: root.$shadow-y;
 
-      color: $color-blue;
-      font-size: $font-md;
+      color: root.$color-blue;
+      font-size: root.$font-md;
 
       display: flex;
       flex-direction: column;
-      gap: $spacing-sm;
-      padding: $spacing-sm;
+      gap: root.$spacing-sm;
+      padding: root.$spacing-sm;
       width: max-content;
     }
   }

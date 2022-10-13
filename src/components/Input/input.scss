@@ -1,35 +1,35 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .input-container {
   position: relative;
 
   .input {
     width: 100%;
-    padding: $spacing-sm;
+    padding: root.$spacing-sm;
     border: 2px solid;
-    @include color(border-color, $color-grey, 0.15);
+    @include root.color(border-color, root.$color-grey, 0.15);
     border-radius: 5px;
 
     &::placeholder {
-      @include color(color, $color-grey, 0.6);
+      @include root.color(color, root.$color-grey, 0.6);
     }
 
     &:focus {
-      outline: 1px solid $color-cyan;
+      outline: 1px solid root.$color-cyan;
     }
   }
 
   .toggle {
     cursor: pointer;
     position: absolute;
-    right: $spacing-sm;
+    right: root.$spacing-sm;
     top: 50%;
     transform: translateY(-50%);
 
     text-transform: uppercase;
-    font-size: $font-xs;
+    font-size: root.$font-xs;
     font-weight: 700;
     letter-spacing: 1px;
-    color: $color-cyan;
+    color: root.$color-cyan;
   }
 }

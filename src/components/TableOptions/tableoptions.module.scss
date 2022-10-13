@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .options {
   position: relative;
@@ -9,32 +9,32 @@
 
   &__wrapper {
     z-index: 20;
-    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: root.$shadow-base;
     position: absolute;
     top: 40%;
     right: 0%;
     width: max-content;
-    background-color: $color-white;
-    padding: $spacing-md;
+    background-color: root.$color-white;
+    padding: root.$spacing-md;
 
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: root.$spacing-md;
   }
 
   &__item {
-    color: $color-grey;
-    font-size: $font-sm;
+    color: root.$color-grey;
+    font-size: root.$font-sm;
     font-weight: 500;
     cursor: pointer;
 
     display: flex;
     align-items: center;
-    gap: $spacing-xs;
+    gap: root.$spacing-xs;
     transition: all 0.1s ease-in-out;
 
     &:hover {
-      color: $color-cyan;
+      color: root.$color-cyan;
     }
   }
 }

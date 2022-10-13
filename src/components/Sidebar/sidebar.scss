@@ -1,13 +1,13 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .sidebar {
   $link-padding: 0.875rem 2rem;
   $link-opacity: 0.6;
 
-  font-size: $font-md;
+  font-size: root.$font-md;
   font-weight: 400;
-  @include color(background-color, $color-white);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  @include root.color(background-color, root.$color-white);
+  box-shadow: root.$shadow-y;
   min-height: 100vh;
   margin: 2rem auto;
   padding: 2rem 0 4rem;
@@ -24,12 +24,12 @@
     display: none;
   }
 
-  @include mq('tablet-wide', max) {
+  @include root.mq('tablet-wide', max) {
     transform: translateX(-100%);
 
     &.active {
       transform: translateX(0);
-      box-shadow: 3px 0px 50px rgba(0, 0, 0, 0.1);
+      box-shadow: root.$shadow-x;
     }
   }
 
@@ -37,37 +37,37 @@
     padding: $link-padding;
     display: flex;
     align-items: center;
-    gap: $spacing-xs;
-    color: $color-blue;
+    gap: root.$spacing-xs;
+    color: root.$color-blue;
 
     select {
       border: none;
-      font-size: $font-md;
+      font-size: root.$font-md;
 
       &:disabled {
         background-color: transparent;
-        color: $color-blue;
+        color: root.$color-blue;
         opacity: 1;
 
         & > option {
-          color: $color-blue;
+          color: root.$color-blue;
         }
       }
     }
   }
 
   &__section {
-    padding-top: $spacing-sm;
+    padding-top: root.$spacing-sm;
   }
 
   &__navlink {
     display: flex;
     align-items: center;
-    gap: $spacing-sm;
+    gap: root.$spacing-sm;
     padding: $link-padding;
 
-    font-size: $font-md;
-    color: $color-blue;
+    font-size: root.$font-md;
+    color: root.$color-blue;
 
     &--link {
       opacity: $link-opacity;
@@ -76,16 +76,16 @@
       &.active,
       &:hover {
         opacity: 1;
-        border-left: 3px solid $color-cyan;
-        @include color(background-color, $color-cyan, 0.1);
+        border-left: 3px solid root.$color-cyan;
+        @include root.color(background-color, root.$color-cyan, 0.1);
       }
     }
 
     &--heading {
       padding-top: 0.875rem;
-      font-size: $font-xs;
+      font-size: root.$font-xs;
       font-weight: 500;
-      color: $color-grey;
+      color: root.$color-grey;
       text-transform: uppercase;
     }
   }

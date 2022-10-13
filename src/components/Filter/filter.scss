@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .filter {
   width: 100%;
@@ -12,20 +12,20 @@
   &__form {
     $height: 2.5rem;
     position: absolute;
-    top: $spacing-lg;
+    top: root.$spacing-lg;
     width: 270px;
     padding: 1.25rem;
-    background-color: $color-white;
-    box-shadow: $shadow-base;
+    background-color: root.$color-white;
+    box-shadow: root.$shadow-base;
     border-radius: 4px;
 
     form {
       display: flex;
       flex-direction: column;
-      gap: $spacing-sm;
+      gap: root.$spacing-sm;
 
       label {
-        font-size: $font-sm;
+        font-size: root.$font-sm;
         font-weight: 500;
         text-transform: capitalize;
       }
@@ -33,31 +33,31 @@
 
     .input {
       border-width: 1px;
-      padding: $spacing-sm;
+      padding: root.$spacing-sm;
       height: $height;
       margin-top: 6px;
 
       &[type='date' i] {
-        color: $color-grey;
+        color: root.$color-grey;
       }
     }
 
     &--buttons {
-      height: $spacing-xl;
+      height: root.$spacing-xl;
       display: flex;
-      gap: $spacing-sm;
-      margin-top: $spacing-md;
+      gap: root.$spacing-sm;
+      margin-top: root.$spacing-md;
 
       .btn,
       .btn-outline {
         text-transform: capitalize;
         letter-spacing: 0;
-        padding-inline: $spacing-lg;
+        padding-inline: root.$spacing-lg;
       }
 
       .btn-outline {
-        @include color(border-color, $color-grey, 1);
-        @include color(color, $color-grey, 1);
+        @include root.color(border-color, root.$color-grey, 1);
+        @include root.color(color, root.$color-grey, 1);
       }
     }
   }

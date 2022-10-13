@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .table-container {
   overflow-x: scroll;
@@ -9,37 +9,37 @@
 }
 
 .table {
-  font-family: $font-work-sans;
+  font-family: root.$font-work-sans;
   width: 100%;
   min-width: 70rem;
   padding: 1.875rem;
-  background-color: $color-white;
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  background-color: root.$color-white;
+  box-shadow: root.$shadow-base;
 
   &__head {
-    color: $color-grey;
-    font-size: $font-xs;
+    color: root.$color-grey;
+    font-size: root.$font-xs;
     text-transform: uppercase;
 
     &--item {
-      padding-block: $spacing-xs;
-      padding-inline: $spacing-xs;
+      padding-block: root.$spacing-xs;
+      padding-inline: root.$spacing-xs;
       text-align: start;
       position: relative;
 
       svg {
-        font-size: $spacing-sm;
+        font-size: root.$spacing-sm;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: $spacing-xs;
+        margin-left: root.$spacing-xs;
       }
     }
   }
 
   &__body {
-    color: $color-grey;
-    font-size: $font-sm;
+    color: root.$color-grey;
+    font-size: root.$font-sm;
     font-weight: 400;
 
     &:last-child {
@@ -49,13 +49,13 @@
     }
 
     &--item {
-      padding-block: $spacing-sm;
-      padding-inline: $spacing-xs;
+      padding-block: root.$spacing-sm;
+      padding-inline: root.$spacing-xs;
       border-bottom: 1px solid;
-      @include color(border-bottom-color, $color-blue, 0.1);
+      @include root.color(border-bottom-color, root.$color-blue, 0.1);
 
       &.options {
-        padding-inline: $spacing-xs;
+        padding-inline: root.$spacing-xs;
       }
 
       &-status {
@@ -65,20 +65,20 @@
         width: max-content;
 
         &.active {
-          @include color(background-color, $color-green, 0.1);
-          color: $color-green;
+          @include root.color(background-color, root.$color-green, 0.1);
+          color: root.$color-green;
         }
         &.pending {
-          @include color(background-color, $color-yellow, 0.1);
-          color: $color-yellow;
+          @include root.color(background-color, root.$color-yellow, 0.1);
+          color: root.$color-yellow;
         }
         &.inactive {
-          @include color(background-color, $color-grey, 0.1);
-          color: $color-grey;
+          @include root.color(background-color, root.$color-grey, 0.1);
+          color: root.$color-grey;
         }
         &.blacklisted {
-          @include color(background-color, $color-red, 0.1);
-          color: $color-red;
+          @include root.color(background-color, root.$color-red, 0.1);
+          color: root.$color-red;
         }
       }
     }

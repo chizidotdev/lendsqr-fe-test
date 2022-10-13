@@ -1,11 +1,11 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .layout {
   $sidebar-width: clamp(15rem, 16vw, 20rem);
   $navbar-height: clamp(5rem, 9.5vh, 7rem);
 
-  @include color(background-color, #fbfbfb);
-  font-family: $font-work-sans;
+  @include root.color(background-color, #fbfbfb);
+  font-family: root.$font-work-sans;
 
   .sidebar {
     width: $sidebar-width;
@@ -21,7 +21,7 @@
     padding-left: $sidebar-width;
     width: 100%;
 
-    @include mq('tablet-wide', max) {
+    @include root.mq('tablet-wide', max) {
       padding-left: 0;
     }
   }

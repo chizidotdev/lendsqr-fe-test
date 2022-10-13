@@ -58,7 +58,7 @@ const UserDetailsHeader = ({ data }: Props) => {
             const active = activeTab === idx ? 'active' : '';
 
             return (
-              <li className={active} onClick={() => setActiveTab(idx)}>
+              <li key={idx} className={active} onClick={() => setActiveTab(idx)}>
                 {tab}
               </li>
             );

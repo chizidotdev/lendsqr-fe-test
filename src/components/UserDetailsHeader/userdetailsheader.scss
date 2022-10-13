@@ -1,24 +1,24 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .details-header {
-  margin-top: $spacing-lg;
-  background-color: $color-white;
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  margin-top: root.$spacing-lg;
+  background-color: root.$color-white;
+  box-shadow: root.$shadow-base;
 
   &__top {
-    color: $color-blue;
-    padding: $spacing-lg;
+    color: root.$color-blue;
+    padding: root.$spacing-lg;
     display: flex;
     align-items: center;
-    gap: $spacing-lg;
-    margin-bottom: $spacing-md;
+    gap: root.$spacing-lg;
+    margin-bottom: root.$spacing-md;
 
-    @include mq('tablet', max) {
+    @include root.mq('tablet', max) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include mq('phone-wide', max) {
+    @include root.mq('phone-wide', max) {
       display: grid;
       grid-template-columns: 1fr;
     }
@@ -34,32 +34,32 @@
 
   &__title {
     .name {
-      font-size: $font-xl;
+      font-size: root.$font-xl;
       font-weight: 500;
-      margin-bottom: $spacing-xs;
+      margin-bottom: root.$spacing-xs;
     }
     .id {
-      font-size: $font-sm;
+      font-size: root.$font-sm;
       font-weight: 400;
-      color: $color-grey;
+      color: root.$color-grey;
     }
   }
 
   &__tier {
-    padding-inline: $spacing-lg;
-    padding-block: $spacing-sm;
+    padding-inline: root.$spacing-lg;
+    padding-block: root.$spacing-sm;
     border-inline: 1px solid;
-    @include color(border-color, $color-grey, 0.2);
+    @include root.color(border-color, root.$color-grey, 0.2);
 
-    font-size: $font-sm;
+    font-size: root.$font-sm;
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: root.$spacing-sm;
 
     &--rating {
-      font-size: $font-md;
-      color: $color-yellow;
+      font-size: root.$font-md;
+      color: root.$color-yellow;
       display: flex;
       gap: 3px;
     }
@@ -69,19 +69,19 @@
     .amount {
       display: flex;
       align-items: center;
-      font-size: $font-xl;
+      font-size: root.$font-xl;
       font-weight: 500;
-      margin-bottom: $spacing-xs;
+      margin-bottom: root.$spacing-xs;
     }
 
     .bank {
-      font-size: $font-xs;
+      font-size: root.$font-xs;
       font-weight: 400;
     }
   }
 
   &__tabs {
-    padding-inline: $spacing-lg;
+    padding-inline: root.$spacing-lg;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -95,18 +95,18 @@
       min-width: max-content;
       cursor: pointer;
       list-style: none;
-      padding-inline: $spacing-lg;
-      padding-bottom: $spacing-sm;
+      padding-inline: root.$spacing-lg;
+      padding-bottom: root.$spacing-sm;
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        color: $color-cyan;
+        color: root.$color-cyan;
       }
     }
 
     .active {
       position: relative;
-      color: $color-cyan;
+      color: root.$color-cyan;
       transition: all 0.2s ease-in-out;
 
       &::after {
@@ -116,8 +116,8 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: $color-cyan;
-        margin-top: $spacing-sm;
+        background-color: root.$color-cyan;
+        margin-top: root.$spacing-sm;
         transition: all 0.2s ease-in-out;
       }
     }

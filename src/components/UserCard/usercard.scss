@@ -1,4 +1,4 @@
-@use '../../styles/' as *;
+@use '../../styles/' as root;
 
 .card {
   display: flex;
@@ -8,29 +8,29 @@
   gap: 0.875rem;
 
   flex: 1;
-  background-color: $color-white;
-  padding: $spacing-lg;
+  background-color: root.$color-white;
+  padding: root.$spacing-lg;
   border-radius: 4px;
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: root.$shadow-base;
 
   &__icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 
-    @include flexCenter;
+    @include root.flexCenter;
   }
 
   &__title {
-    color: $color-grey;
-    font-size: $font-sm;
+    color: root.$color-grey;
+    font-size: root.$font-sm;
     font-weight: 500;
     text-transform: uppercase;
   }
 
   &__value {
-    font-size: $font-lg;
+    font-size: root.$font-lg;
     font-weight: 600;
-    color: $color-blue;
+    color: root.$color-blue;
   }
 }
