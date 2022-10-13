@@ -1,10 +1,11 @@
 import './styles/App.scss';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import UserDetails from './pages/UserDetails';
+const Login = React.lazy(() => import('./pages/Login'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const UserDetails = React.lazy(() => import('./pages/UserDetails'));
 
 const queryclient = new QueryClient();
 
